@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dash.css">
+    <script src="https://kit.fontawesome.com/6148a9a46c.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <header class="header">
+        <form action="#">
+            <div class="top-nav">
+                <input class="search" type="text" placeholder="Search...">
+                <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+
+        <div class="top-nav2">
+            <ul>
+                <li><i class="fa-solid fa-bell"></i></li>
+                <li><button id="userButton"><i class="fa-solid fa-user"></i></button></li>
+            </ul>
+        </div>
+        <div class="user-popup" id="userPopup">
+            <a href="#">User Details</a>
+            <a href="#">Switch Account</a>
+            <a href="#">Logout</a>
+        </div>
+    </header>
+
+    <section class="sidebar">
+        <div class="logo">
+            <h2>MaluPet</i></h2>
+            <h2><i class="fa-solid fa-dog"></i></h2>
+        </div>        
+        <div class="menu">
+            <center>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="./appoint.html">Appointment</a></li>
+                <li><a href="./adminadoption.html">Adoption</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="user.html">Users</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </center>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="card">
+            <div class="c1">
+                <h2><i class="fa-solid fa-paw"></i></h2>
+            </div>
+            <div class="c11">
+                <h2>5073</h2>
+                <h3>Pets</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c2">
+                <h2><i class="fa-solid fa-user-doctor"></i></h2>
+            </div>
+            <div class="c22">
+                <h2>18</h2>
+                <h3>Veterinarian</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c3">
+                <h2><i class="fa-solid fa-scissors"></i></h2>
+            </div>
+            <div class="c33">
+                <h2>33</h2>
+                <h3>Groomer</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="table-wrapper">
+                <th>
+                    <select class="filter-dropdown">
+                        <option value="all">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                </th>
+                <table class="table1">
+                    <tr>
+                        <th colspan="4">RECENT APPOINTMENTS</th>
+                    </tr>
+                    <tr>
+                        <th>User</th>
+                        <th>Date</th>
+                        <th>Pet</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Bombom</td>
+                        <td>04/29/24</td>
+                        <td>Mammoth</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Gio</td>
+                        <td>04/29/34</td>
+                        <td>Sabertooth</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Steven</td>
+                        <td>04/29/34</td>
+                        <td>Dragon</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Allen</td>
+                        <td>04/29/34</td>
+                        <td>Shark</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Azief</td>
+                        <td>04/29/34</td>
+                        <td>Lion</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Ian</td>
+                        <td>04/29/34</td>
+                        <td>T-Rex</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Myke</td>
+                        <td>04/29/34</td>
+                        <td>Triceratops</td>
+                        <td>Pending</td>
+                    </tr>
+                    
+    
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pie"></div>
+            <div class="stats">
+                <p class="stat1"><i class="fa-solid fa-circle"></i></p>
+                <p class="p1">81% Complete</p>
+                <p class="stat2"><i class="fa-solid fa-circle"></i></p>
+                <p class="p2">19% Pending</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="bar-chart-container">
+                <div class="bar">
+                  <div class="bar-inner1" style="width: 50%;">Adopted: 115</div>
+                </div>
+                <div class="bar">
+                  <div class="bar-inner2" style="width: 40%;">Operated: 85</div>
+                </div>
+                <div class="bar">
+                  <div class="bar-inner3" style="width: 70%;">Groomed: 242</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Toggle the visibility of the user popup when the user icon button is clicked
+        document.getElementById("userButton").addEventListener("click", function() {
+            var popup = document.getElementById("userPopup");
+            if (popup.style.display === "block") {
+                popup.style.display = "none";
+            } else {
+                popup.style.display = "block";
+            }
+        });
+
+        // Close the user popup when clicking outside of it
+        window.onclick = function(event) {
+            var popup = document.getElementById("userPopup");
+            if (event.target !== popup && !popup.contains(event.target)) {
+                popup.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

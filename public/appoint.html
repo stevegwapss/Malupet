@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/appointss.css">
+    <script src="https://kit.fontawesome.com/6148a9a46c.js" crossorigin="anonymous"></script>
+    <title>Appointment</title>
+</head>
+<body>
+    <header class="header">
+        <form action="#">
+            <div class="top-nav">
+                <input class="search" type="text" placeholder="Search...">
+                <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+
+        <div class="top-nav2">
+            <ul>
+                <li><i class="fa-solid fa-bell"></i></li>
+                <li><i class="fa-solid fa-user"></i></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="sidebar">
+        <div class="logo">
+            <h2>MaluPet</i></h2>
+            <h2><i class="fa-solid fa-dog"></i></h2>
+        </div>        
+        <div class="menu">
+            <center>
+            <ul>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="appoint.html">Appointment</a></li>
+                <li><a href="./adminadoption.html">Adoption</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="user.html">Users</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </center>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="card">
+            <div class="table-wrapper">
+                <th>
+                    <select class="filter-dropdown">
+                        <option value="all">All</option>
+                        <option value="pending">Veterinary</option>
+                        <option value="completed">Grooming</option>
+                        
+                    </select>
+                </th>
+                <table class="table1">
+                    <tr>
+                        <th colspan="4">APPOINTMENT OVERVIEW</th>
+
+                    </tr>
+                    <tr>
+                        <th>User</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Service</th>
+                        <th>Pet</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Bombom</td>
+                        <td>04/29/24</td>
+                        <td>9:30 pm</td>
+                        <td>Veterinary</td>
+                        <td>Mammoth</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Gio</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Grooming</td>
+                        <td>Sabertooth</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Steven</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Grooming</td>
+                        <td>Dragon</td>
+                        <td>Pending</td>
+                    </tr class="appointment-row">
+                    <tr>
+                        <td>Allen</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Veterinary</td>
+                        <td>Shark</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Azief</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Grooming</td>
+                        <td>Lion</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Ian</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Grooming</td>
+                        <td>T-Rex</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Myke</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Veterinary</td>
+                        <td>Tiger</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Greybin</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Veterinary</td>
+                        <td>Dolphin</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Huesca</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Grooming</td>
+                        <td>Penguin</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Dean</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Grooming</td>
+                        <td>Click 125</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Aldrikz</td>
+                        <td>04/29/34</td>
+                        <td>9:30 pm</td>
+                        <td>Grooming</td>
+                        <td>Donkey</td>
+                        <td>Pending</td>
+                    </tr>
+    
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pie"></div>
+            <div class="stats">
+                <p class="stat1"><i class="fa-solid fa-circle"></i></p>
+                <p class="p1">81% Grooming</p>
+                <p class="stat2"><i class="fa-solid fa-circle"></i></p>
+                <p class="p2">19% Veterinary</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c1">
+                <h2><i class="fa-solid fa-clipboard"></i></h2>
+            </div>
+            <div class="c11">
+                <h2>1073</h2>
+                <h6>Appointments</h6>
+            </div>
+        </div>
+        <div class="card">
+            <div class="graph-container">
+                <div class="bar bar-grooming" style="width: 81%;">Grooming</div>
+                <div class="bar bar-veterinary" style="width: 19%;">Veterinary</div>
+            </div>
+            <div class="stats">
+                <p class="stat1"><i class="fa-solid fa-circle"></i></p>
+                <p class="p1">81% Grooming</p>
+                <p class="stat2"><i class="fa-solid fa-circle"></i></p>
+                <p class="p2">19% Veterinary</p>
+            </div>
+        </div>
+        
+       
+    </main>
+    <div id="modal">
+        <div id="modal-content">
+            <span class="close">&times;</span>
+            <h2>User Details</h2>
+            <p><strong>User ID:</strong> 1</p>
+            <p><strong>Email:</strong> bombombakudan@gmail.com</p>
+            <p><strong>First Name:</strong> Bom</p>
+            <p><strong>Last Name:</strong> Kundong</p>
+            <p><strong>Pet Type:</strong> Dog</p>
+            <p><strong>Contact No.:</strong> 123-456-7890</p>
+            <p><strong>Appointment Date:</strong> 2024-29-01</p>
+            <p><strong>Appointment Time:</strong> 9:00 AM</p>
+            <h3>Appointment message:</h3>
+            <div class="message-box">Hello i would like to have my pet anthony groomed, he is well trained and should not cause trouble. </div>
+            <br>
+            
+        </div>
+    </div>
+    
+    <script>
+        const modal = document.getElementById('modal');
+        const closeModal = document.querySelector('.close');
+        const appointmentRows = document.querySelectorAll('.appointment-row');
+    
+        appointmentRows.forEach(row => {
+            row.addEventListener('click', () => {
+                modal.style.display = 'block';
+            });
+        });
+    
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+        }
+    
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+
+</html>

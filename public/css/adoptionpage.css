@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+}
+
+section {
+  padding-top: 50px;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #007784;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 14px;
+  padding: 7px 10px;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+
+a.active,
+nav ul li a:hover {
+  background: #0091a1;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.return {
+  background-color:transparent;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+.return:hover {
+  outline: none;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #d2e2f1;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 50%;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    padding-top: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 15px;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+.pet {
+  height: fit-content;
+}
+
+.pet_content {
+  margin: 20px;
+}
+
+.pet_card_holder {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 20px;
+  padding: 30px;
+}
+#openPopup {
+  position: relative;
+  bottom:20px;
+  width: 40px; 
+  height: 25px; 
+  font-size: 17px; 
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+
+.popup-content h1{
+  margin-bottom: 20px;
+}
+popup-content h2{
+  padding :10px;;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  background-color: #0091a1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.closePopup{
+  position: relative;
+  top:20px;
+  left:130px;
+}
+
+.pet_button{
+  position: relative;
+  left:75px;
+}
+.pet_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px;
+  background-color: #0091a1;
+  max-height: 550px; /* Adjust the maximum height as needed */
+  overflow: auto; /* Allow scrolling if content exceeds the maximum height */
+}
+
+.pet_img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  height: 40%;
+}
+
+.pet_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upper_title h2{
+  position: relative;
+  top: 5px;
+  left:60px;
+  color: #0091a1;
+}
+
+.pet_card p {
+  font-size: 16px;
+}
+
+.pet_info {
+  padding: 20px;
+  padding-bottom: 0;
+  color: white;
+}
+
+.pet_info .pet_name {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.pet_card button {
+  margin: 20px auto;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #0091a1;
+  transition: all 0.1s ease-in;
+}
+
+.pet_card button:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in;
+  background-color: #779ff0;
+  color: #202020;
+}
+
+@media only screen and (max-width: 800px) {
+  .pet_card {
+    margin: 10px;
+  }
+
+  .pet_img img {
+    max-width: 70%;
+  }
+
+  .pet_card button {
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .pet_card_holder {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+
+.foots{
+  height: 100%;
+  background-color: rgb(23, 23, 23);
+}
+
+@media (min-width: 372px) {
+
+  .container6{
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+
+  .foot1 a{
+    color: white;
+    padding-bottom: 40px;
+    font-size: 12px;
+  }
+
+  .foot1 h2{
+    padding-bottom: 20px;
+    color: white;
+    font-size: 13px;
+  }
+
+  .foot2 a{
+    color: white;
+    padding-bottom: 40px;
+    font-size: 12px;
+    
+  }
+
+  .foot2 h2{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 13px;
+  }
+
+
+  .foot3 p{
+    color: white;
+    font-size: 12px;
+  }
+
+  .foot3 h2{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 13px;
+  }
+
+  .container6,a{
+    color: white;
+    font-size: 12px;
+  }
+  
+}
+
+@media (min-width:700px) {
+
+  .foot1 h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+  }
+
+  .container6{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+}
+
+.foot1 a:hover{
+  color: #0091a1;
+}
+
+.foot2 a:hover{
+  color: #0091a1;
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/services.css">
+    <script src="https://kit.fontawesome.com/6148a9a46c.js" crossorigin="anonymous"></script>
+    <title>Services</title>
+</head>
+<body>
+    <header class="header">
+        <form action="#">
+            <div class="top-nav">
+                <input class="search" type="text" placeholder="Search...">
+                <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+
+        <div class="top-nav2">
+            <ul>
+                <li><i class="fa-solid fa-bell"></i></li>
+                <li><i class="fa-solid fa-user"></i></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="sidebar">
+        <div class="logo">
+            <h2>MaluPet</i></h2>
+            <h2><i class="fa-solid fa-dog"></i></h2>
+        </div>        
+        <div class="menu">
+            <center>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="./appoint.html">Appointment</a></li>
+                <li><a href="./adminadoption.html">Adoption</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="user.html">Users</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </center>
+        </div>
+    </section>
+    <main class="main">
+        <div class="card">
+            <div class="table-wrapper">
+                <th>
+                    <select class="filter-dropdown">
+                        <option value="all">All</option>
+                        <option value="pending">Service</option>
+                        <option value="completed">Mode</option>
+                        
+                    </select>
+                </th>
+                <table class="table1">
+                    <tr>
+                        <th colspan="4">SERVICES OVERVIEW</th>
+
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>service</th>
+                        <th>Mode</th>
+                        <th>zip</th>
+                        <th>EX month</th>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>hues</td>
+                        <td>04/29/24</td>
+                        <td>Basic</td>
+                        <td>Gcash</td>
+                        <td>7000</td>
+                        <td>03/28/30</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Art</td>
+                        <td>04/28/24</td>
+                        <td>Premium</td>
+                        <td>Paymaya</td>
+                        <td>7000</td>
+                        <td>03/23/40</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Ken</td>
+                        <td>04/27/24</td>
+                        <td>Standard</td>
+                        <td>Paypal</td>
+                        <td>7000</td>
+                        <td>03/21/28</td>
+                    </tr class="appointment-row">
+                    <tr>
+                        <td>Allen</td>
+                        <td>04/26/24</td>
+                        <td>Standard</td>
+                        <td>Paypal</td>
+                        <td>7000</td>
+                        <td>09/08/40</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Azief</td>
+                        <td>04/25/24</td>
+                        <td>Basic</td>
+                        <td>Gcash</td>
+                        <td>7000</td>
+                        <td>11/23/31</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>hues</td>
+                        <td>04/29/24</td>
+                        <td>Basic</td>
+                        <td>Gcash</td>
+                        <td>7000</td>
+                        <td>03/28/30</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Art</td>
+                        <td>04/28/24</td>
+                        <td>Premium</td>
+                        <td>Paymaya</td>
+                        <td>7000</td>
+                        <td>03/23/40</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Ken</td>
+                        <td>04/27/24</td>
+                        <td>Standard</td>
+                        <td>Paypal</td>
+                        <td>7000</td>
+                        <td>03/21/28</td>
+                    </tr class="appointment-row">
+                    <tr>
+                        <td>Allen</td>
+                        <td>04/26/24</td>
+                        <td>Standard</td>
+                        <td>Paypal</td>
+                        <td>7000</td>
+                        <td>09/08/40</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Azief</td>
+                        <td>04/25/24</td>
+                        <td>Basic</td>
+                        <td>Gcash</td>
+                        <td>7000</td>
+                        <td>11/23/31</td>
+                    </tr>
+                    <tr class="appointment-row">
+                        <td>Aldrikz</td>
+                        <td>04/29/34</td>
+                        <td>Premium</td>
+                        <td>Gcash</td>
+                        <td>7000</td>
+                        <td>12/01/34</td>
+                    </tr>
+    
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c6">
+                <h2>ADD SERVICES AVAILABLE</h2>
+            </div>
+            <div class="c66">
+                <button id="add-serv-btn">ADD SERVICES</button>
+            </div>
+            
+        </div>
+        <div class="card">
+            <center>
+            <div class="c8">
+                <h2>MANAGE SERVICES</h2>
+            </div>
+            <div class="c88">  
+                <button id="edit-serv-btn">MANAGE</button>
+            </div>
+        </center>
+        </div>
+        <div class="card">
+            <center>
+            <div class="c1">
+                <h2><i class="fa-solid fa-paw"></i></h2>
+            </div>
+            <div class="c11">
+                <h2>2132</h2>
+                <h3>Services enabled</h3>
+            </div>
+        </center>
+        </div>
+        </main>
+        <div id="addServiceModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeAddServiceModal()">&times;</span>
+              <h2>Add Service</h2>
+              <form>
+                <label for="subscriptionType">Subscription Type:</label>
+                <input type="text" id="subscriptionType" name="subscriptionType"><br><br>
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount" name="amount"><br><br>
+                <button type="button" onclick="addService()">Add</button>
+                <button type="button" onclick="closeAddServiceModal()">Cancel</button>
+              </form>
+            </div>
+          </div>
+          <div id="manageServiceModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeManageServiceModal()">&times;</span>
+                <h2>Manage Service</h2>
+                <form>
+                    <label for="id">ID:</label><br>
+                    <input type="text" id="id" name="id" required><br>
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" required><br>
+                    <button type="button" onclick="deleteService()">Delete</button>
+                    <button type="button" onclick="removeSubscription()">Remove Subscription</button>
+                    <button type="button" onclick="closeManageServiceModal()">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+
+          <script>
+        // Function to open the add service modal
+        function openAddServiceModal() {
+            document.getElementById("addServiceModal").style.display = "block";
+        }
+
+        // Function to close the add service modal
+        function closeAddServiceModal() {
+            document.getElementById("addServiceModal").style.display = "none";
+        }
+
+        // Function to add a new service
+        function addService() {
+            var subscriptionType = document.getElementById("subscriptionType").value;
+            var amount = document.getElementById("amount").value;
+
+            // Here, you can perform any actions you need with the subscriptionType and amount, such as sending them to a server
+
+            // Close the modal after adding the service
+            closeAddServiceModal();
+        }
+
+        // Function to open the manage service modal
+        function openManageServiceModal() {
+            document.getElementById("manageServiceModal").style.display = "block";
+        }
+
+        // Function to close the manage service modal
+        function closeManageServiceModal() {
+            document.getElementById("manageServiceModal").style.display = "none";
+        }
+
+        // Function to delete a service
+        function deleteService() {
+            var id = document.getElementById("id").value;
+
+            // Here, you can perform any actions you need with the ID, such as deleting the service from a database
+
+            // Close the modal after deleting the service
+            closeManageServiceModal();
+        }
+
+        // Function to remove a subscription
+        function removeSubscription() {
+            var username = document.getElementById("username").value;
+
+            // Here, you can perform any actions you need with the username, such as removing the subscription from a user's account
+
+            // Close the modal after removing the subscription
+            closeManageServiceModal();
+        }
+
+        // Event listener to open the add service modal when the "ADD SERVICES" button is clicked
+        document.getElementById("add-serv-btn").addEventListener("click", openAddServiceModal);
+
+        // Event listener to open the manage service modal when the "MANAGE" button is clicked
+        document.getElementById("edit-serv-btn").addEventListener("click", openManageServiceModal);
+    </script>
+</body>
+</html>

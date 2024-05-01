@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/paw.png">
+    <script src="https://kit.fontawesome.com/6148a9a46c.js" crossorigin="anonymous"></script>
+    <script src="./js/adopt.js"></script>
+    <link rel="stylesheet" href="./css/adoptform.css">
+    <title>Adoption Form</title>
+</head>
+<body>
+    <nav>
+        <label class="logo">MaluPet<i class="fa-solid fa-dog"></i></label>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a class="return" href="./adoptionpage.html">Return</i></a></li>
+        </ul>
+    </nav>
+
+    <section class="adopt">
+        <div class="upper_title">
+            <h2>Ready to Bring Home a Pet?</h2>
+        </div>
+        <div class="adopt_content">
+            <div id="adopt_info"></div> 
+            <div class="adopt_form_wrapper">
+                <h3>Adoption Form</h3>
+                <form action="checkout.html" class="adopt_form">
+                    <div class="adopt_text">
+                        <label for="firstName">First Name<br></label>
+                     <input type="text" id="firstName" required> 
+                    </div>
+                        
+                    <div class="adopt_text">
+                        <label for="lastName">Last Name<br></label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                        
+                    <div class="adopt_text"> 
+                        <label for="user_email">Email<br></label>
+                        <input type="email" id="user_email" required>
+                    </div>
+                    
+                    <div class="adopt_text">
+                        <label for="dates">Pick-up Date<br></label>
+                        <input type="date" id="dates" required>
+                    </div>
+
+                    <div class="adopt_text">
+                        <label for="num">Contact Number<br></label>
+                        <input class="no-arrows" id="num" type="number" min="1" required>
+                    </div>
+
+                    <input type="submit" onclick="confirmReservation(this)">
+                   
+                </form>
+            </div>
+        </div>
+        <footer class="foots">
+            <div class="container6">
+                <div class="foot1">
+                    <h2>Our Services</h2>
+                    <ol>
+                        <li><a href="#">Pet Insurance</a></li>
+                        <li><a href="#">Pet Surgeries</a></li>
+                        <li><a href="#">Pet Adoption</a></li>
+                        <li><a href="#">Pet Care</a></li>
+                    </ol>
+                </div>
+                <div class="foot2">
+                    <h2>Connect With Us</h2>
+                    <ol>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ol>
+                </div>
+                <div class="foot3">
+                    <h2>Contact Information</h2>
+                    <p>Bagong Silang Quatro Lima Zone 5, Zamaboanga City Philippines</p>
+                    <p>Email: ikawlangbebe@gmail.com</p>
+                    <p>Phone: +63 934 233 0992</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container6">
+                    <div class="copy">
+                        <p>&copy; 2024 Malupet. All rights reserved.</p>
+                    </div>
+                    <div class="privacy">
+                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/paw.png">
+    <script src="https://kit.fontawesome.com/6148a9a46c.js" crossorigin="anonymous"></script>
+    <script src="./js/adopt.js"></script>
+    <link rel="stylesheet" href="./css/adoptionpage.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <label label class="logo">MaluPet<i class="fa-solid fa-dog"></i></label>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a class="return" href="./index.html">Home</a></li>
+          </ul>
+      </nav>    
+      <section class="pet" id="page2">
+        <div class="upper_title">
+        <h2>Find your perfect furry companion <br> among our wonderful selection of adoptable pets!</h2>
+        </div>
+        <div class="pet_wrapper">
+            <div class="pet_content">
+                <div class="pet_card_holder">
+                    <div class="pet_card">
+                        <div class="pet_img">
+                            <img class="pet_pic" src="./img/daisy.jpg" alt="daisy">
+                        </div>
+                        <div class="pet_info">
+                            <button class="openPopup" data-target="popup_1"style="width:40px; height:25px;"><i class="fa-solid fa-ellipsis"></i></button>
+                            <div id="popup_1" class="popup">
+                                <div class="popup-content">
+                                    <h1>DAISY</h1>
+                                    <h2>Pet Description</h2>
+                                    <form>
+                                        <p>Meet our playful friend who delights in every moment of life, 
+                                            <br>bringing joy and laughter with their infectious energy. 
+                                            <br>They're always up for a game of fetch or a romp in the park, 
+                                            <br>spreading happiness wherever they go.</p>
+                                            <h2>Pet behaviors</h2>
+                                        <p>-Playful and energetic, loves interactive games<br> and outdoor activities.</p>
+                                        <p>-Is good with other dogs and gentle with cats.</p>
+
+                                        <h2>Favorite things</h2>
+                                        <p>-Chasing after favorite toys, whether it's a squeaky ball,
+                                            <br> feather wand, or stuffed mouse.</p>
+                                        <p>-Enjoying tasty treats like crunchy biscuits, chewy bones,
+                                            <br> or a dollop of peanut butter.</p>
+                                           
+
+                                            <button type="button" class="closePopup">Close</button>
+                                      
+                                    </form>
+                                </div>
+                            </div>
+
+                            <h3 class="pet_name">Daisy</h3>
+                            <p class="pet_type"><strong>Pet Type :</strong> Dog</p>
+                            <p class="pet_breed"><strong>Breed :</strong> Aspin</p>
+                            <p class="pet_gender"><strong>Gender :</strong> Female</p>
+                            <p class="pet_color"><strong>Color :</strong> Black</p>
+                            <p class="pet_age"><strong>Age :</strong> 3</p>
+                        </div>
+                        <button class="pet_button" onclick="adopt(this)">ADOPT</button>
+                    </div>
+
+         
+                    
+                    <div class="pet_card">
+                        <div class="pet_img">   
+                            <img class="pet_pic" src="./img/aOD.jpg" alt="daisy" width = "100%">
+                        </div>
+                        <div class="pet_info">
+                            <button class="openPopup" data-target="popup_2"style="width:40px; height:25px;"><i class="fa-solid fa-ellipsis"></i></button>
+                            <div id="popup_2" class="popup">
+                                <div class="popup-content">
+                                    <h1>OUTWORLD DESTROYER</h1>
+                                    <h2>Pet Description</h2>
+                                    <form>
+                                        <p>Meet our playful friend who delights in every moment of life, 
+                                            <br>bringing joy and laughter with their infectious energy. 
+                                            <br>They're always up for a game of fetch or a romp in the park, 
+                                            <br>spreading happiness wherever they go.</p>
+                                            <h2>Pet behaviors</h2>
+                                        <p>-Playful and energetic, loves interactive games<br> and outdoor activities.</p>
+                                        <p>-Is good with other dogs and gentle with cats.</p>
+
+                                        <h2>Favorite things</h2>
+                                        <p>-Chasing after favorite toys, whether it's a squeaky ball,
+                                            <br> feather wand, or stuffed mouse.</p>
+                                        <p>-Enjoying tasty treats like crunchy biscuits, chewy bones,
+                                            <br> or a dollop of peanut butter.</p>
+                                           
+
+                                            <button type="button" class="closePopup">Close</button>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+
+                            <h3 class="pet_name">Outworld Destroyer</h3>
+                            <p class="pet_type"><strong>Pet Type :</strong> Dog</p>
+                            <p class="pet_breed"><strong>Breed :</strong> PitBull</p>
+                            <p class="pet_gender"><strong>Gender :</strong> Female</p>
+                            <p class="pet_color"><strong>Color :</strong> Brown</p>
+                            <p class="pet_age"><strong>Age :</strong> 4</p>
+                        </div>
+                        <button class="pet_button" onclick="adopt(this)">ADOPT</button>
+                    </div>
+                    
+                 
+                    <div class="pet_card">
+                        <div class="pet_img">
+                            <img class="pet_pic" src="./img/peakyblinders.jpg" alt="daisy">
+                        </div>
+                        <div class="pet_info">
+                            <button class="openPopup" data-target="popup_3"style="width:40px; height:25px;"><i class="fa-solid fa-ellipsis"></i></button>
+                            <div id="popup_3" class="popup">
+                                <div class="popup-content">
+                                    <h1>LIL CAT</h1>
+                                    <h2>Pet Description</h2>
+                                    <form>
+                                        <p>Meet our playful friend who delights in every moment of life, 
+                                            <br>bringing joy and laughter with their infectious energy. 
+                                            <br>They're always up for a game of fetch or a romp in the park, 
+                                            <br>spreading happiness wherever they go.</p>
+                                            <h2>Pet behaviors</h2>
+                                        <p>-Playful and energetic, loves interactive games<br> and outdoor activities.</p>
+                                        <p>-Is good with other dogs and gentle with cats.</p>
+
+                                        <h2>Favorite things</h2>
+                                        <p>-Chasing after favorite toys, whether it's a squeaky ball,
+                                            <br> feather wand, or stuffed mouse.</p>
+                                        <p>-Enjoying tasty treats like crunchy biscuits, chewy bones,
+                                            <br> or a dollop of peanut butter.</p>
+                                           
+
+                                            <button type="button" class="closePopup">Close</button>
+                                    
+                                    </form>
+                                </div>
+                            </div>
+                            <h3 class="pet_name">Lil cat</h3>
+                            <p class="pet_type"><strong>Pet Type :</strong> Cat</p>
+                            <p class="pet_breed"><strong>Breed :</strong> british shorthair</p>
+                            <p class="pet_gender"><strong>Gender :</strong> Female</p>
+                            <p class="pet_color"><strong>Color :</strong> grey</p>
+                            <p class="pet_age"><strong>Age :</strong> 3</p>
+                        </div>
+                        <button class="pet_button" onclick="adopt(this)">ADOPT</button>
+                    </div>
+
+                    <div class="pet_card">
+                        <div class="pet_img">
+                            <img class="pet_pic" src="./img/cupcake.jpg" alt="daisy">
+                        </div>
+                        <div class="pet_info">
+                            <button class="openPopup" data-target="popup_4"style="width:40px; height:25px;"><i class="fa-solid fa-ellipsis"></i></button>
+                            <div id="popup_4" class="popup">
+                                <div class="popup-content">
+                                    <h1>CUPCAKE</h1>
+                                    <h2>Pet Description</h2>
+                                    <form>
+                                        <p>Meet our playful friend who delights in every moment of life, 
+                                            <br>bringing joy and laughter with their infectious energy. 
+                                            <br>They're always up for a game of fetch or a romp in the park, 
+                                            <br>spreading happiness wherever they go.</p>
+                                            <h2>Pet behaviors</h2>
+                                        <p>-Playful and energetic, loves interactive games<br> and outdoor activities.</p>
+                                        <p>-Is good with other dogs and gentle with cats.</p>
+
+                                        <h2>Favorite things</h2>
+                                        <p>-Chasing after favorite toys, whether it's a squeaky ball,
+                                            <br> feather wand, or stuffed mouse.</p>
+                                        <p>-Enjoying tasty treats like crunchy biscuits, chewy bones,
+                                            <br> or a dollop of peanut butter.</p>
+                                           
+
+                                            <button type="button" class="closePopup">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <h3 class="pet_name">Cupcake</h3>
+                            <p class="pet_type"><strong>Pet Type :</strong> Dog</p>
+                            <p class="pet_breed"><strong>Breed :</strong> PitBull</p>
+                            <p class="pet_gender"><strong>Gender :</strong> Female</p>
+                            <p class="pet_color"><strong>Color :</strong> Black</p>
+                            <p class="pet_age"><strong>Age :</strong> 2</p>
+                        </div>
+                        <button class="pet_button" onclick="adopt(this)">ADOPT</button>
+                    </div>
+
+
+                    <div class="pet_card">
+                        <div class="pet_img">
+                            <img class="pet_pic" src="./img/josiah.jpg" alt="daisy">
+                        </div>
+                        <div class="pet_info">
+                            <button class="openPopup" data-target="popup_5"style="width:40px; height:25px;"><i class="fa-solid fa-ellipsis"></i></button>
+                            <div id="popup_5" class="popup">
+                                <div class="popup-content">
+                                    <h1>JOSIAH</h1>
+                                    <h2>Pet Description</h2>
+                                    <form>
+                                        <p>Meet our playful friend who delights in every moment of life, 
+                                            <br>bringing joy and laughter with their infectious energy. 
+                                            <br>They're always up for a game of fetch or a romp in the park, 
+                                            <br>spreading happiness wherever they go.</p>
+                                            <h2>Pet behaviors</h2>
+                                        <p>-Playful and energetic, loves interactive games<br> and outdoor activities.</p>
+                                        <p>-Is good with other dogs and gentle with cats.</p>
+
+                                        <h2>Favorite things</h2>
+                                        <p>-Chasing after favorite toys, whether it's a squeaky ball,
+                                            <br> feather wand, or stuffed mouse.</p>
+                                        <p>-Enjoying tasty treats like crunchy biscuits, chewy bones,
+                                            <br> or a dollop of peanut butter.</p>
+                                           
+
+                                            <button type="button" class="closePopup">Close</button>
+                                            
+                                    </form>
+                                </div>
+                            </div>
+                            <h3 class="pet_name">Josiah</h3>
+                            <p class="pet_type"><strong>Pet Type :</strong> Cat</p>
+                            <p class="pet_breed"><strong>Breed :</strong> orange</p>
+                            <p class="pet_gender"><strong>Gender :</strong> Male</p>
+                            <p class="pet_color"><strong>Color :</strong> Orange</p>
+                            <p class="pet_age"><strong>Age :</strong> 3</p>
+                        </div>
+                        <button class="pet_button" onclick="adopt(this)">ADOPT</button>
+                    </div>
+
+                    <div class="pet_card">
+                        <div class="pet_img">
+                            <img class="pet_pic" src="./img/aweskita.jpg" alt="daisy"  width = "100%">
+                        </div>
+                        <div class="pet_info">
+                            <button class="openPopup" data-target="popup_6"style="width:40px; height:25px;"><i class="fa-solid fa-ellipsis"></i></button>
+                            <div id="popup_6" class="popup">
+                                <div class="popup-content">
+                                    <h1>ANTHONY</h1>
+                                    <h2>Pet Description</h2>
+                                    <form>
+                                        <p>Meet our playful friend who delights in every moment of life, 
+                                            <br>bringing joy and laughter with their infectious energy. 
+                                            <br>They're always up for a game of fetch or a romp in the park, 
+                                            <br>spreading happiness wherever they go.</p>
+                                            <h2>Pet behaviors</h2>
+                                        <p>-Playful and energetic, loves interactive games<br> and outdoor activities.</p>
+                                        <p>-Is good with other dogs and gentle with cats.</p>
+
+                                        <h2>Favorite things</h2>
+                                        <p>-Chasing after favorite toys, whether it's a squeaky ball,
+                                            <br> feather wand, or stuffed mouse.</p>
+                                        <p>-Enjoying tasty treats like crunchy biscuits, chewy bones,
+                                            <br> or a dollop of peanut butter.</p>
+                                           
+
+                                            <button type="button" class="closePopup">Close</button>
+                                           
+                                    </form>
+                                </div>
+                            </div>
+                            <h3 class="pet_name">Anthony</h3>
+                            <p class="pet_type"><strong>Pet Type :</strong> Dog</p>
+                            <p class="pet_breed"><strong>Breed :</strong> Aspin</p>
+                            <p class="pet_gender"><strong>Gender :</strong> Male</p>
+                            <p class="pet_color"><strong>Color :</strong> Brown</p>
+                            <p class="pet_age"><strong>Age :</strong> 7</p>
+                        </div>
+                        <button class="pet_button" onclick="adopt(this)">ADOPT</button>
+                    </div>
+
+                    <!-- Add more pet cards as needed -->
+
+                </div>
+            </div>
+        </div>
+        <footer class="foots">
+            <div class="container6">
+                <div class="foot1">
+                    <h2>Our Services</h2>
+                    <ol>
+                        <li><a href="#">Pet Insurance</a></li>
+                        <li><a href="#">Pet Surgeries</a></li>
+                        <li><a href="#">Pet Adoption</a></li>
+                        <li><a href="#">Pet Care</a></li>
+                    </ol>
+                </div>
+                <div class="foot2">
+                    <h2>Connect With Us</h2>
+                    <ol>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ol>
+                </div>
+                <div class="foot3">
+                    <h2>Contact Information</h2>
+                    <p>Bagong Silang Quatro Lima Zone 5, Zamaboanga City Philippines</p>
+                    <p>Email: ikawlangbebe@gmail.com</p>
+                    <p>Phone: +63 934 233 0992</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container6">
+                    <div class="copy">
+                        <p>&copy; 2024 Malupet. All rights reserved.</p>
+                    </div>
+                    <div class="privacy">
+                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const openPopupButtons = document.querySelectorAll(".openPopup");
+    const closePopupButtons = document.querySelectorAll(".closePopup");
+
+    openPopupButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const targetPopupId = button.dataset.target;
+            const popup = document.getElementById(targetPopupId);
+            popup.style.display = "block";
+        });
+    });
+
+    closePopupButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const popup = button.closest(".popup");
+            popup.style.display = "none";
+        });
+    });
+
+   
+    });
+
+
+
+    </script>
+</body>
+</html>

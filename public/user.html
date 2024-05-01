@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/userss.css">
+    <script src="https://kit.fontawesome.com/6148a9a46c.js" crossorigin="anonymous"></script>
+    <title>Users</title>
+</head>
+<body>
+    <header class="header">
+        <form action="#">
+            <div class="top-nav">
+                <input class="search" type="text" placeholder="Search...">
+                <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+
+        <div class="top-nav2">
+            <ul>
+                <li><i class="fa-solid fa-bell"></i></li>
+                <li><i class="fa-solid fa-user"></i></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="sidebar">
+        <div class="logo">
+            <h2>MaluPet</h2>
+            <h2><i class="fa-solid fa-dog"></i></h2>
+        </div>        
+        <div class="menu">
+            <center>
+                <ul>
+                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="./appoint.html">Appointment</a></li>
+                    <li><a href="./adminadoption.html">Adoption</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="user.html">Users</a></li>
+                    <li><a href="">Logout</a></li>
+                </ul>
+            </center>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="card">
+            <div class="table-wrapper">
+                <th>
+                    <select class="filter-dropdown">
+                        <option value="all">All</option>
+                        <option value="pending">Surname</option>
+                        <option value="completed">Status</option>
+                        
+                    </select>
+                </th>
+                <table class="table1">
+                    <div>
+                        <h2>USER OVERVIEW</h2>
+                    </div>
+
+                    <tr>
+                        <th>User ID</th>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Surname</th>
+                        <th>Username</th>
+                        <th>Status</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1073</td>
+                        <td>bomba@gmail.com</td>
+                        <td>moB</td>
+                        <td>ducoy</td>
+                        <td>bomi</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1073', 'bomba@gmail.com', 'moB', 'ducoy', 'bomi', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1072</td>
+                        <td>aso@gmail.com</td>
+                        <td>weskita</td>
+                        <td>layam</td>
+                        <td>wes</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1072', 'aso@gmail.com', 'weskita', 'wes', 'wes', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1071</td>
+                        <td>arcee@gmail.com</td>
+                        <td>arcee</td>
+                        <td>kammanchile</td>
+                        <td>ace</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1071', 'arcee@gmail.com', 'arcee', 'kammanchile', 'ace', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1070</td>
+                        <td>ballin@gmail.com</td>
+                        <td>ballin</td>
+                        <td>catsixtynine</td>
+                        <td>ballin</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1070', 'arcee@gmail.com', 'arcee', 'kammanchile', 'ace', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1069</td>
+                        <td>abada@gmail.com</td>
+                        <td>abba</td>
+                        <td>dabadoo</td>
+                        <td>abba</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1069', 'arcee@gmail.com', 'arcee', 'kammanchile', 'ace', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1068</td>
+                        <td>abadeer@gmail.com</td>
+                        <td>marcy</td>
+                        <td>abadeer</td>
+                        <td>marcy</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1068', 'arcee@gmail.com', 'arcee', 'kammanchile', 'ace', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1067</td>
+                        <td>mertens@gmail.com</td>
+                        <td>finn</td>
+                        <td>mertens</td>
+                        <td>fin</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1067', 'arcee@gmail.com', 'arcee', 'kammanchile', 'ace', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1066</td>
+                        <td>lady@gmail.com</td>
+                        <td>jake</td>
+                        <td>daDAWG</td>
+                        <td>jake</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1066', 'arcee@gmail.com', 'arcee', 'kammanchile', 'ace', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1065</td>
+                        <td>BMO@gmail.com</td>
+                        <td>bmo</td>
+                        <td>gamepad</td>
+                        <td>bmo</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1065', 'arcee@gmail.com', 'arcee', 'kammanchile', 'ace', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>1064</td>
+                        <td>shelly@gmail.com</td>
+                        <td>shelby</td>
+                        <td>violin</td>
+                        <td>shlem</td>
+                        <td>Active</td>
+                        <td><button onclick="redirectToUserDetails('1064', 'arcee@gmail.com', 'arcee', 'kammanchile', 'ace', 'Active')"><i class="fa-solid fa-ellipsis"></i></button></td>
+                    </tr>
+                    
+                    <tr>
+                        <th colspan="4">page 1 of 1073 </th>
+                    </tr>
+             
+                </table>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c1">
+                <h2><i class="fa-regular fa-user"></i></h2>
+            </div>
+            <div class="c11">
+                <h2>1073</h2>
+                <h3>Users</h3>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c2">
+                <h2><i class="fa-solid fa-chart-simple"></i></h2>
+            </div>
+            <div class="c22">
+                <h2>123</h2>
+                <h3>registrations</h3>
+                <h3>this month</h3>
+
+            </div>
+                
+        
+        
+      
+    </div>
+    </main>
+    <script>
+        function redirectToUserDetails(userId, email, firstName, surname, username, status) {
+            const userDetails = {
+                userId: userId,
+                email: email,
+                firstName: firstName,
+                surname: surname,
+                username: username,
+                status: status
+            };
+
+            const urlParams = new URLSearchParams(userDetails);
+            window.location.href = "userpage.html?" + urlParams.toString();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/userpage.css">
+    <script src="https://kit.fontawesome.com/6148a9a46c.js" crossorigin="anonymous"></script>
+    <title>User Details</title>
+    
+</head>
+<body>
+    <nav>
+        <label label class="logo">USER</label>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+        </label>
+        <ul>
+          <li class="home1"><a href="./user.html">Return</a></li>
+          </ul>
+      </nav>
+      
+    <main class="main">
+        <div class="user-details" id="userDetailsContainer">
+            <h1>User Details</h1>
+            <div class="profile-icon">
+                <i class="fas fa-user-circle fa-7x"></i> <!-- Font Awesome user circle icon -->
+                <div class="edit-icon" onclick="confirmEditMode()">
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            <div class="details" id="userDetailsBox">
+                <div><strong>User ID:</strong> <span id="userId"></span></div>
+                <div><strong>Email:</strong> <span id="email"></span></div>
+                <div><strong>First Name:</strong> <span id="firstName"></span></div>
+                <div><strong>Surname:</strong> <span id="surname"></span></div>
+                <div><strong>Username:</strong> <span id="username"></span></div>
+                <div><strong>Status:</strong> <span id="status"></span></div>
+            </div>
+
+        </div>
+        <button class="update-btn" onclick="confirmUpdate()">UPDATE</button>
+        <button class="delete-btn" onclick="confirmDelete()">DELETE</button>
+        <button class="restrict-btn" onclick="openRestrictPopup()">RESTRICT</button>
+    </main>
+    <div id="restrictPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeRestrictPopup()">&times;</span>
+            <h2>Restrict User</h2>
+            <label for="Duration">Duration:</label>
+            <select id="Duration">
+                <option value="2-weeks">2 weeks</option>
+                <option value="1-months">1 month</option>
+                <option value="6-months">6 months</option>
+            </select>
+            <label for="reason">Reason:</label>
+            <select id="reason">
+                <option value="spam">Spam</option>
+                <option value="profanity">Use of Profanity</option>
+                <option value="scam">Scam</option>
+            </select>
+            <button onclick="applyRestriction()">Apply</button>
+        </div>
+    </div>
+    <script>
+       // Extract URL parameters
+       const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+        const email = urlParams.get('email');
+        const firstName = urlParams.get('firstName');
+        const surname = urlParams.get('surname');
+        const username = urlParams.get('username');
+        const status = urlParams.get('status');
+
+        // Populate user details
+        document.getElementById('userId').innerText = userId;
+        document.getElementById('email').innerText = email;
+        document.getElementById('firstName').innerText = firstName;
+        document.getElementById('surname').innerText = surname;
+        document.getElementById('username').innerText = username;
+        document.getElementById('status').innerText = status;
+
+        // Function to confirm edit mode
+        function confirmEditMode() {
+            const confirmed = window.confirm('Are you sure you want to edit the details?');
+            if (confirmed) {
+                enableEditMode();
+            }
+        }
+
+        // Function to enable edit mode
+        function enableEditMode() {
+            const userDetailsBox = document.getElementById('userDetailsBox');
+            const editableElements = userDetailsBox.querySelectorAll('span');
+            editableElements.forEach(element => {
+                element.contentEditable = 'true';
+            });
+        }
+
+        // Function to confirm update
+        function confirmUpdate() {
+            const confirmed = window.confirm('Are you sure you want to update?');
+            if (confirmed) {
+                // If confirmed, proceed with update
+                updateUserDetails();
+            }
+        }
+
+        // Function to update user details
+        function updateUserDetails() {
+            const userDetailsBox = document.getElementById('userDetailsBox');
+            const editableElements = userDetailsBox.querySelectorAll('span');
+            editableElements.forEach(element => {
+                element.contentEditable = 'false';
+            });
+            // Implement your update logic here
+            alert('User details updated successfully!');
+        }
+
+        //delete
+        function confirmDelete() {
+            const confirmed = window.confirm('Are you sure you want to delete?');
+            if (confirmed) {
+                // If confirmed, proceed with update
+                deleteUserDetails();
+            }
+        }
+
+        // Function to update user details
+        function deleteUserDetails() {
+            const userDetailsBox = document.getElementById('userDetailsBox');
+            const editableElements = userDetailsBox.querySelectorAll('span');
+            editableElements.forEach(element => {
+                element.contentEditable = 'false';
+            });
+            // Implement your update logic here
+            alert('User details deleted successfully!');
+        }
+
+        // Add event listener to revert changes when clicking outside the editable zone
+        document.addEventListener('click', function(event) {
+            const userDetailsContainer = document.getElementById('userDetailsContainer');
+            const isClickInside = userDetailsContainer.contains(event.target);
+            if (!isClickInside) {
+                // Clicked outside the editable zone, revert changes
+                revertChanges();
+            }
+        });
+
+        // Function to revert changes
+        function revertChanges() {
+            const userDetailsBox = document.getElementById('userDetailsBox');
+            const editableElements = userDetailsBox.querySelectorAll('span');
+            editableElements.forEach(element => {
+                element.innerText = element.dataset.originalValue; // Revert to original value
+                element.contentEditable = 'false'; // Disable editing
+            });
+        }
+
+        // Initialize original values for editable elements
+        const userDetailsBox = document.getElementById('userDetailsBox');
+        const editableElements = userDetailsBox.querySelectorAll('span');
+        editableElements.forEach(element => {
+            element.dataset.originalValue = element.innerText; // Store original value
+        });
+
+        function openRestrictPopup() {
+            document.getElementById('restrictPopup').style.display = 'block';
+        }
+
+        function closeRestrictPopup() {
+            document.getElementById('restrictPopup').style.display = 'none';
+        }
+
+        function applyRestriction() {
+            // Implement restriction logic here
+            alert('User restricted successfully!');
+            closeRestrictPopup();
+        }
+    </script>
+   
+</body>
+</html>

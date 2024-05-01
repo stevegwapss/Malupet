@@ -1,0 +1,374 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  nav{
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* ensures nav is above other content */
+    background: #007784;
+    height: 80px;
+    width: 100%;
+  }
+  
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  
+  nav ul li a{
+    color: white;
+    font-size: 14px;
+    padding: 7px 10px;
+    margin-right: 20px;
+    border-radius: 3px;
+  
+  }
+  
+  a.active, nav ul li a:hover{
+    background: #0091a1;
+    transition: .5s;
+    cursor: pointer;
+  }
+  
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check{
+    display: none;
+  }
+  
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+  
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #d2e2f1;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    
+    #check:checked ~ ul{
+      left: 0;
+    }
+    
+  }
+  
+    @media (max-width: 952px){
+      label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+      }
+      nav ul li a{
+        font-size: 16px;
+      }
+    }
+    @media (max-width: 858px){
+      .checkbtn{
+        display: block;
+      }
+      ul{
+        position: fixed;
+        width: 50%;
+        /* Set a max-height for the menu and make it scrollable */
+        max-height: calc(100vh - 80px); /* Adjusted to account for the nav height */
+        overflow-y: auto;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        padding-top: 20px; /* Adds some spacing at the top */
+      }
+      nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 15px;
+      }
+      nav ul li a{
+        font-size: 12px;
+      }
+    }
+    
+
+.adopt{
+    height: fit-content;
+  }
+
+  /* this is from js*/
+.adopt_infos{
+  width: 300px;
+  height: 430px;
+  background-color: #0091a1;
+  font-size: 17px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px;
+  margin-left: 70px;
+}
+.adopt_infos h3{
+  font-size: 24px;
+}
+.adopt_know{
+  padding: 10px;
+}
+
+.adopt_know p{
+  margin-bottom: 15px;
+}
+
+.adopt_know h3{
+  margin-bottom: 20px;
+}
+
+.adopt_car{
+    width: 100%;
+}
+
+.adoptd_form_wrapper{
+  width: 10%;
+  
+}
+
+.adopt_form_wrapper h3{
+  position: relative;
+  bottom: 30px;
+  right:20px;
+  text-align: center;
+  color: #010000;
+}
+.upper_title h2{
+position: relative;
+top: 20px;
+left:75px;
+color: #0091a1;
+}
+.adopt_content{
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 0;
+}
+
+.adopt_form {
+  position: relative;
+  left: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  width: 80%;
+}
+
+.adopt_text{
+  flex-grow: 0; /* Do not allow the div to grow */
+  flex-shrink: 0; /* Do not allow the div to shrink */
+  flex-basis: calc(50% - 5px); /* Set the initial size of the div */
+  margin-bottom: 20px;
+}
+
+.adopt_text input{
+  width: 90%;
+  padding: 1ch;
+}
+
+.adopt_form label{
+  font-weight: 600;
+  font-size: small;
+  width: 100%;
+}
+
+.adopt_photo_holder{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.adopt_form input[type = "submit"]{
+  padding:1 inch;
+  width: 30%;
+  height: 30px;
+  background-color: #0091a1;
+  border: none;
+  color: #e4e4e4;
+  position:relative;
+  top:100px;
+  right: 130px;
+  transition: all 0.1 ease-in;
+}
+
+.adopt_form input[type = "submit"]:hover{
+  background-color: #ab5050;
+  color: #202020;
+  transform: scale(1.02);
+  transition: all 0.1 ease-in;
+}
+
+/* This code will remove the up and down arrow in number */
+input.no-arrows::-webkit-inner-spin-button,
+input.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media only screen and (max-width:600px){
+  .adopt_text{
+    flex-basis:auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:800px){
+  
+  .adopt_form_wrapper{
+    width: 90%;
+  }
+
+  .adopt_content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .adopt_infos{
+    width: 90%;
+    margin-bottom: 50px;
+    margin-left: 5%;
+  }
+
+  .adopt_infos img{
+    width: 70%;
+  }
+
+}
+/*reserved END */
+.foots{
+  height: 100%;
+  background-color: rgb(23, 23, 23);
+}
+
+@media (min-width: 372px) {
+
+  .container6{
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+
+  .foot1 a{
+    color: white;
+    padding-bottom: 40px;
+    font-size: 12px;
+  }
+
+  .foot1 h2{
+    padding-bottom: 20px;
+    color: white;
+    font-size: 13px;
+  }
+
+  .foot2 a{
+    color: white;
+    padding-bottom: 40px;
+    font-size: 12px;
+    
+  }
+
+  .foot2 h2{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 13px;
+  }
+
+
+  .foot3 p{
+    color: white;
+    font-size: 12px;
+  }
+
+  .foot3 h2{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 13px;
+  }
+
+  .container6,a{
+    color: white;
+    font-size: 12px;
+  }
+  
+}
+
+@media (min-width:700px) {
+
+  .foot1 h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+  }
+
+  .container6{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+}
+
+.foot1 a:hover{
+  color: #0091a1;
+}
+
+.foot2 a:hover{
+  color: #0091a1;
+}
