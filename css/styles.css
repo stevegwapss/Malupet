@@ -59,7 +59,7 @@ nav ul li a{
 }
 .admin {
   position: relative; /* Set the position to absolute */
-  right:  90px; /* Adjust the left position to move it to the far left */
+  right:  500px; /* Adjust the left position to move it to the far left */
 }
 
 /* Adjust the margin of the navigation items to accommodate the user icon */
