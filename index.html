@@ -9,7 +9,7 @@
     <title>Malupet</title>
 </head>
 <body>
-  <!-- hi -->
+  
     <nav>
       <label label class="logo">MaluPet<i class="fa-solid fa-dog"></i></label>
       <input type="checkbox" id="check">
@@ -267,26 +267,74 @@
     </footer>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-          const isLoggedIn = sessionStorage.getItem('isLoggedIn');
-
+          const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  
           // Function to disable click events
           function disableClickEvents() {
               document.querySelectorAll('a').forEach(function(link) {
                   link.onclick = function(event) {
                       if (!isLoggedIn) {
                           event.preventDefault(); // Prevent default action (e.g., following a link)
-                          window.location.href = '/login.html'; // Redirect to login page
+                          window.location.href = 'login.html'; // Redirect to login page
                       }
                   };
               });
           }
-
+  
+          // Disable click events initially
           disableClickEvents();
-
-    
-
+  
+          // Function to enable click events after login
+          function enableClickEvents() {
+              document.querySelectorAll('a').forEach(function(link) {
+                  link.onclick = null; // Remove the click event handler
+              });
+          }
+  
+          // Check if user is logged in and enable click events accordingly
+          if (isLoggedIn) {
+              enableClickEvents();
+          }
+  
+          // Event listener for logout button
+          const logOut = document.querySelector('.logout');
+          if (logOut) {
+              logOut.onclick = () => {
+                  localStorage.clear(); // Clear local storage
+                  window.location.href = 'login.html'; // Redirect to login page
+              };
+          }
+  
+          // Login form submission handling
+          const loginForm = document.getElementById('login-form');
+          if (loginForm) {
+              loginForm.addEventListener('submit', function(event) {
+                  event.preventDefault(); // Prevent default form submission
+  
+                  // Simulate successful login regardless of credentials
+                  localStorage.setItem('isLoggedIn', 'true');
+  
+                  // Enable click events after successful login
+                  enableClickEvents();
+              });
+          }
+  
+          // Register form submission handling
+          const registerForm = document.getElementById('register-form');
+          if (registerForm) {
+              registerForm.addEventListener('submit', function(event) {
+                  event.preventDefault(); // Prevent default form submission
+  
+                  // Simulate successful registration
+                  localStorage.setItem('isLoggedIn', 'true');
+  
+                  // Enable click events after successful registration
+                  enableClickEvents();
+              });
+          }
       });
   </script>
+  
   
   <script src="./js/home.js"></script>
       

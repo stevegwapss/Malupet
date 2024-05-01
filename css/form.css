@@ -31,7 +31,7 @@ body{
 }
 
 .heading{
-    opacity:0;
+    opacity:1;
     text-transform: capitalize;
     text-align: center;
     font-size: 60px;
@@ -43,7 +43,7 @@ body{
 input,
 .submit-btn
 {   
-    opacity: 0;
+    opacity: 1; /* Adjust opacity to make the fields and button visible */
     width: 80%;
     height: 35px;
     display: block;
@@ -55,7 +55,6 @@ input,
     padding: 15px;
     transition: .5s;
     text-transform: capitalize;
-
 }
 input::placeholder{
     color: #171616;
@@ -106,24 +105,4 @@ input:focus::placeholder{
     color: #fff;
 }
 
-.alert-box{
-    position: absolute;
-    top: -100%;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 150px;
-    max-width: 90%;
-    width: auto;
-    height: auto;
-    padding: 10px;
-    text-transform: capitalize;
-    background: rgb(255, 37, 37);
-    border-top: 10px solid rgb(255, 119, 119);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    color:#fff;
-    font-family: 'roboto', sans-serif;
-    text-align: center;
-    transition: 1s;
-}
 
