@@ -57,6 +57,15 @@ nav ul li a{
   border-radius: 3px;
 
 }
+.admin {
+  position: absolute; /* Set the position to absolute */
+  left: 10px; /* Adjust the left position to move it to the far left */
+}
+
+/* Adjust the margin of the navigation items to accommodate the user icon */
+nav ul {
+  margin-left: 40px; /* Adjust as needed */
+}
 
 a.active, nav ul li a:hover{
   background: #0091a1;
